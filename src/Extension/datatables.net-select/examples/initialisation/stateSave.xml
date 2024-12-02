@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" order="5">
+
+<css lib="datatables select"/>
+<js lib="jquery datatables select">
+<![CDATA[
+
+$('#example').DataTable({
+	ajax: '../data/objects.txt',
+	columns: [
+		{ data: 'name' },
+		{ data: 'position' },
+		{ data: 'office' },
+		{ data: 'salary' }
+	],
+	rowId: 'id',
+	stateSave: true,
+	select: true
+});
+
+]]>
+</js>
+
+<js-vanilla>
+<![CDATA[
+new DataTable('#example', {
+	ajax: '../data/objects.txt',
+	columns: [
+		{ data: 'name' },
+		{ data: 'position' },
+		{ data: 'office' },
+		{ data: 'salary' }
+	],
+	rowId: 'id',
+	stateSave: true,
+	select: true
+});
+
+]]>
+</js-vanilla>
+
+<title lib="Select">State Save</title>
+
+<info><![CDATA[
+
+This example shows how select integrates with the `-init stateSave` initialisation option.
+
+Note that for the selection state of rows to be saved, the rows _must_ have a unique identifier available. You can tell DataTables where to find the id property through the `-init rowId` option.
+
+]]></info>
+
+<custom-table>
+<table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Salary</th>
+        </tr>
+    </tfoot>
+</table>
+</custom-table>
+
+</dt-example>
+

@@ -1,0 +1,44 @@
+<component name="libraryTable">
+  <library name="ref">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/all_prepended_bytes.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/store.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/slashes_and_izarc.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/all.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/all.7zip.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/backslash.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/pollution.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/utf8.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/extra_attributes.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/pile_of_poo.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/winrar_utf8_in_name.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/zip64.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/data_descriptor.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/all_missing_bytes.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/nested_data_descriptor.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/nested.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/zip64_appended_bytes.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/subfolder.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/empty.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/all_appended_bytes.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/folder.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/utf8_in_name.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/deflate.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/zip64_prepended_bytes.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/text.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/nested_zip64.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/archive_comment.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/deflate-stream.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/encrypted.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/extra_filed_non_standard.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/all-stream.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/all.windows.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/zip64_missing_bytes.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/image.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/store-stream.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/local_encoding_in_name.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,215 @@
+.properties-container {
+    padding: 10px;
+
+    .header {
+        display: flex; // Added to ensure flex layout
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px; // Added some padding for spacing
+        background-color: #f8f9fa; // Light background for header
+        border-bottom: 1px solid #e9ecef; // Subtle border
+
+        .title {
+            display: flex;
+            align-items: center;
+            font-size: 3rem;
+            font-weight: 600;
+            color: #333;
+
+            .icon {
+                margin-right: 10px;
+                &.building-icon {
+                    // You can add specific styling for building icon if needed
+                }
+            }
+        }
+
+        div {
+            display: flex;
+            .add-button {
+                display: flex;
+                align-items: center;
+                background-color: #007bff;
+                color: white;
+                padding: 10px 15px;
+                border-radius: 5px;
+                cursor: pointer;
+                border: none;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: darken(#007bff, 10%);
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                }
+
+                &:active {
+                    transform: translateY(1px);
+                    background-color: darken(#007bff, 15%);
+                }
+
+                .icon {
+                    display: inline-block;
+                    margin-right: 8px; // Space between icon and text
+
+                    &.plus-icon {
+                        width: 16px;
+                        height: 16px;
+                        position: relative;
+
+                        &::before {
+                            content: '+';
+                            font-size: 16px;
+                            color: white;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+            }
+        }
+
+        // Styles for the tenant button
+        .btn_primary {
+            display: flex;
+            align-items: center;
+            background-color: #28a745; // Green color
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            margin-left: 10px; // Space between buttons
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: darken(#28a745, 10%);
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            &:active {
+                transform: translateY(1px);
+                background-color: darken(#28a745, 15%);
+            }
+
+            .fa-users {
+                margin-right: 8px;
+            }
+        }
+    }
+
+    .card-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+        margin-top: 10px;
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .card-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+
+                .card-icon {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #007bff;
+                    border-radius: 50%;
+                    position: relative;
+
+                    &::before {
+                        content: '💳'; // Unicode cho thẻ
+                        font-size: 14px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: white;
+                    }
+                }
+
+                .card-code {
+                    font-weight: bold;
+                    margin-left: 10px;
+                }
+
+                .actions {
+                    display: flex;
+                    gap: 5px;
+
+                    .edit-button,
+                    .delete-button {
+                        width: 24px;
+                        height: 24px;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        &.edit-button {
+                            background-color: #28a745;
+
+                            &::before {
+                                content: '✎'; // Unicode cho biểu tượng chỉnh sửa
+                                font-size: 14px;
+                                color: white;
+                            }
+                        }
+
+                        &.delete-button {
+                            background-color: #dc3545;
+
+                            &::before {
+                                content: '🗑'; // Unicode cho biểu tượng xóa
+                                font-size: 14px;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card-body {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .status {
+                    margin-top: auto;
+                    display: flex;
+                    justify-content: center;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    font-size: 0.875rem;
+
+                    &.active {
+                        background-color: #e6ffe6;
+                        color: #2f8f2f;
+                    }
+
+                    &.inactive {
+                        background-color: #ffe6e6;
+                        color: #bf4040;
+                    }
+                }
+            }
+        }
+    }
+}

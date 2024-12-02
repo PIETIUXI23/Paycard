@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="permissions">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/permissions/linux_zip.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/permissions/windows_winrar.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/permissions/linux_ark.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/permissions/mac_finder.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/permissions/linux_file_roller-ubuntu.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/permissions/windows_7z.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/permissions/windows_compressed_folders.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/permissions/linux_file_roller-xubuntu.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/permissions/windows_izarc.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/permissions/linux_7z.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

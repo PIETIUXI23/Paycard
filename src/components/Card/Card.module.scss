@@ -1,0 +1,322 @@
+.wrapper {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #f2f2f2;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 6px 0px rgba(44, 44, 44, 0.04);
+    margin-bottom: 20px;
+}
+
+.vip-card-layout {
+    height: 455px;
+    .image-box {
+        display: grid;
+        grid-template-columns: 70% 15% 15%;
+        box-sizing: border-box;
+        grid-template-rows: auto auto;
+        height: 233px;
+        .item0 {
+            // padding-bottom: 50.5%;
+            grid-row: 1 / 3;
+            grid-column: 1 / 2;
+            padding-right: 2px;
+            height: 233px;
+        }
+        .item1 {
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
+            padding-bottom: 2px;
+            height: 117px;
+        }
+        .item2 {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            padding-right: 1px;
+            height: calc(233px - 117px);
+        }
+        .item3 {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+            padding-left: 1px;
+            height: calc(233px - 117px);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .card-info {
+        padding: 16px;
+        height: 155px;
+        .card-title {
+            font-family: 'Lexend', sans-serif !important;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 500 !important;
+            letter-spacing: -0.2px;
+            color: #2c2c2c;
+            text-transform: uppercase;
+        }
+        .card-detail {
+            margin-top: 8px;
+            .card-dot {
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 400 !important;
+                color: #999;
+                margin: 0 8px;
+                line-height: 26px;
+            }
+            .cost {
+                font-family: 'Lexend', Arial;
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 500 !important;
+                color: #e03c31;
+                line-height: 26px;
+            }
+            .area {
+                font-family: 'Lexend', Arial;
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 500 !important;
+                color: #e03c31;
+                line-height: 26px;
+            }
+            .local {
+                height: 40px;
+                clear: left;
+                font-family: 'Lexend', sans-serif;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 400 !important;
+                color: #505050;
+                overflow: hidden !important;
+            }
+        }
+        .card-description {
+            height: 40px;
+            margin-top: 8px;
+            clear: left;
+            font-family: 'Lexend', sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400px !important;
+            color: #505050;
+            overflow: hidden !important;
+        }
+    }
+
+    .card-contact {
+        border-top: 1px solid #f2f2f2;
+        width: 100%;
+        height: calc(100% - 155px - 233px);
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .user {
+            flex: 1;
+            display: flex;
+            height: 100%;
+            font-family: 'Lexend', sans-serif !important;
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 500 !important;
+            color: #2c2c2c;
+            text-align: left;
+            white-space: nowrap;
+            .avatar {
+                height: 32px;
+                width: 32px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+            span {
+                margin-left: 10px;
+            }
+            .user-name {
+            }
+            .create-at {
+                font-weight: 400;
+                color: #999 !important;
+            }
+        }
+
+        .actions {
+            .phone-number {
+                height: 32px;
+                background-color: #009ba1;
+                color: #fff;
+                margin-right: 10px;
+                border-radius: 4px;
+            }
+            .favorite-btn {
+                padding: 0px;
+                width: 32px;
+                height: 32px;
+                padding-left: 8px;
+                border-radius: 4px;
+            }
+
+            .active {
+                background-color: red;
+                color: white;
+            }
+        }
+    }
+}
+
+.normal-card-layout {
+    display: flex;
+    height: 253px;
+    .image-box {
+        height: 100%;
+        width: 232px;
+        display: grid;
+        grid-template-columns: auto auto;
+        box-sizing: border-box;
+        grid-template-rows: auto auto auto;
+
+        .item0 {
+            padding-bottom: 2px;
+            grid-row: 1 / 3;
+            grid-column: 1 / 3;
+            width: 232px;
+            height: 186px;
+        }
+        .item1 {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            height: calc(253px - 186px);
+            width: calc(232px / 2);
+            padding-right: 1px;
+        }
+        .item2 {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+            height: calc(253px - 186px);
+            width: calc(232px / 2);
+            padding-left: 1px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .card-info {
+        padding: 16px;
+        height: 190px;
+        .card-title {
+            font-family: 'Lexend', sans-serif !important;
+            font-size: 18px;
+            line-height: 20px;
+            font-weight: 500 !important;
+            letter-spacing: -0.2px;
+            color: #2c2c2c;
+            text-transform: uppercase;
+        }
+        .card-detail {
+            margin-top: 8px;
+            .card-dot {
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 400 !important;
+                color: #999;
+                margin: 0 8px;
+                line-height: 26px;
+            }
+            .cost {
+                font-family: 'Lexend', Arial;
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 500 !important;
+                color: #e03c31;
+                line-height: 26px;
+            }
+            .area {
+                font-family: 'Lexend', Arial;
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 500 !important;
+                color: #e03c31;
+                line-height: 26px;
+            }
+            .local {
+                height: 40px;
+                clear: left;
+                font-family: 'Lexend', sans-serif;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 400 !important;
+                color: #505050;
+                overflow: hidden !important;
+            }
+        }
+        .card-description {
+            height: 40px;
+            margin-top: 8px;
+            clear: left;
+            font-family: 'Lexend', sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400px !important;
+            color: #505050;
+            overflow: hidden !important;
+        }
+    }
+
+    .card-contact {
+        width: 100%;
+        height: calc(100% - 190px);
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .user {
+            flex: 1;
+            display: flex;
+            height: 100%;
+            font-family: 'Lexend', sans-serif !important;
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 500 !important;
+            color: #2c2c2c;
+            text-align: left;
+            white-space: nowrap;
+            .avatar {
+                height: 32px;
+                width: 32px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+            span {
+                margin-left: 10px;
+            }
+            .user-name {
+            }
+            .create-at {
+                font-weight: 400;
+                color: #999 !important;
+            }
+        }
+
+        .actions {
+            .favorite-btn {
+                padding: 0px;
+                width: 32px;
+                height: 32px;
+                padding-left: 8px;
+                border-radius: 4px;
+            }
+            .active {
+                background-color: red;
+                color: white;
+            }
+        }
+    }
+}

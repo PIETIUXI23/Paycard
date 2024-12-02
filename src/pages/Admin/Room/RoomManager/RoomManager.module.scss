@@ -1,0 +1,101 @@
+.container {
+    font-size: 16px;
+
+    .stats-bar {
+        margin: 30px;
+        // display: flex;
+        gap: 20px;
+        .btn_success {
+            margin-right: 30px;
+            background-color: #c0e275;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    }
+
+    .rooms {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 20px;
+        gap: 10px;
+
+        .room {
+            flex: 1 1 auto;
+            min-width: 220px;
+            max-width: 270px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+            .thumbnail {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .room-header {
+                    font-size: 15px;
+                    font-weight: bold;
+                    padding: 10px;
+                }
+
+                .btn-add {
+                    width: 100%;
+                    background-color: #c0e275;
+                    border-radius: 5px;
+                }
+
+                .room-details {
+                    font-size: 11px;
+                    padding: 10px;
+
+                    .status-empty {
+                        color: green;
+                        padding: 10px;
+                    }
+
+                    .status-occupied {
+                        color: orange;
+                        padding: 10px;
+                    }
+
+                    .price {
+                        color: red;
+                        padding: 10px;
+                    }
+                }
+
+                .room-actions {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 10px;
+
+                    .btn {
+                        font-size: 10px;
+                        padding: 5px;
+                        border: none;
+                        border-radius: 4px;
+                        text-align: center;
+                        cursor: pointer;
+
+                        &.btn-primary {
+                            background-color: #007bff;
+                            color: white;
+                        }
+
+                        &.btn-danger {
+                            background-color: #dc3545;
+                            color: white;
+                        }
+
+                        &.btn-info {
+                            background-color: #17a2b8;
+                            color: white;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-button library="Select">
+	<name>selectAll</name>
+	<summary>Select all items in the table based on the current item select mode</summary>
+	<since>1.0.0</since>
+
+	<description>
+		The `selectAll` button will simply select all items in the table, based on the current item selection mode (`s-api select.items()`) - e.g. if the item selection mode is `rows`, all rows in the table will be selected when this button is activated.
+	</description>
+
+	<defaults>
+		<parameter name="text" value="Select all">
+			This can be configured using the `buttons.selectAll` option of the DataTables `dt-init language` object, or using the `b-init buttons.buttons.text` option for this button.
+		</parameter>
+		<parameter name="className" value="buttons-select-all"/>
+		<parameter name="action" value="function">
+			Select all items in the table based on the current item select mode.
+		</parameter>
+		<parameter name="selectorModifier" value="function|object" since="1.7.0">
+			Provides a method to control what items should be selected through the `-type selector-modifier` option. For example you can limit the selection to the current filtered values, or the current page. This option can also be given as a function which passes the same arguments as `-init buttons.buttons.action` and expects a selector modifier in return.
+		</parameter>
+	</defaults>
+
+	<example title="DataTables initialisation: Show select all and select none buttons with language options in the DataTables language object"><![CDATA[
+new DataTable('#myTable', {
+	layout: {
+		topStart: {
+			buttons: ['selectAll', 'selectNone']
+		}
+	},
+	language: {
+		buttons: {
+			selectAll: 'Select all items',
+			selectNone: 'Select none'
+		}
+	}
+});
+]]></example>
+
+	<example title="Using a selector modifier to select only rows matched by the current filter (first button), and those on the first page (second button)."><![CDATA[
+new DataTable('#myTable', {
+	layout: {
+		topStart: {
+			buttons: [
+				{
+					text: 'Select filter applied - object',
+					extend: 'selectAll',
+					selectorModifier: {
+						search: 'applied'
+					}
+				},
+				{
+					text: 'Select current page - function',
+					extend: 'selectAll',
+					selectorModifier: function () {
+						return {
+							page: 'current'
+						};
+					}
+				},
+				'selectNone'
+			]
+		}
+	}
+});
+]]></example>
+</dt-button>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="ajax-details" order="8">
+
+<css lib="datatables select"/>
+<js lib="jquery datatables select"/>
+
+<js>
+<![CDATA[
+var table = $('#example').DataTable({
+	ajax: '../../../../examples/ajax/data/objects.txt',
+	columns: [
+		{
+			data: null,
+			render: DataTable.render.select(),
+		},
+		{ data: 'name' },
+		{ data: 'position' },
+		{ data: 'office' },
+		{ data: 'salary' }
+	],
+	select: {
+		style: 'multi',
+		selector: 'td:first-child',
+		headerCheckbox: 'select-page'
+	}
+});
+
+]]>
+</js>
+
+<js-vanilla>
+<![CDATA[
+new DataTable('#example', {
+	ajax: '../../../../examples/ajax/data/objects.txt',
+	columns: [
+		{
+			data: null,
+			render: DataTable.render.select()
+		},
+		{ data: 'name' },
+		{ data: 'position' },
+		{ data: 'office' },
+		{ data: 'salary' }
+	],
+	select: {
+		style: 'multi',
+		selector: 'td:first-child',
+		headerCheckbox: 'select-page'
+	}
+});
+
+]]>
+</js-vanilla>
+
+<title>Current page selection only</title>
+
+<info><![CDATA[
+
+This example shows the checkbox selection option being used with Ajax loaded data and a header checkbox which will select only the rows in on the current page, as defined by the `-init select.headerCheckbox` option.
+
+In this mode the header checkbox operates on, and reflects the status on, the current page of data only.
+
+]]></info>
+
+</dt-example>

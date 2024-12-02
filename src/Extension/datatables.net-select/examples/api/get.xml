@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" order="1">
+
+<css lib="datatables select buttons"/>
+<js lib="jquery datatables select buttons">
+<![CDATA[
+
+var events = $('#events');
+var table = $('#example').DataTable({
+	layout: {
+		topStart: {
+			buttons: [
+				{
+					text: 'Get selected data',
+					action: function () {
+						var count = table.rows({ selected: true }).count();
+
+						events.prepend('<div>' + count + ' row(s) selected</div>');
+					}
+				}
+			]
+		}
+	},
+	select: true
+});
+
+]]>
+</js>
+
+<js-vanilla>
+<![CDATA[
+function message(message) {
+	let el = document.querySelector('#events');
+	let div = document.createElement('div');
+
+	div.textContent = message;
+	el.prepend(div);
+}
+
+let table = new DataTable('#example', {
+	layout: {
+		topStart: {
+			buttons: [
+				{
+					text: 'Get selected data',
+					action: function () {
+						let count = table.rows({ selected: true }).count();
+
+						message(count + ' row(s) selected');
+					}
+				}
+			]
+		}
+	},
+	select: true
+});
+
+]]>
+</js-vanilla>
+
+<title lib="Select">Get selected items</title>
+
+<info><![CDATA[
+
+When Select is enabled on a table you will inevitably wish to know what rows have been selected so you can perform some action on them (edit, delete, highlight, etc). Select augments the `dt-type selector-modifier` object that can be used with the DataTables selector methods (`dt-api rows()`, `dt-api columns()` and `dt-api cells()` methods - as well as their singular counterparts) with a `selected` option.
+
+For example, to get the selected rows, columns and cells (lines 1, 2 and 3 respectively):
+
+```js
+table.rows( { selected: true } );
+table.columns( { selected: true } );
+table.cells( { selected: true } );
+```
+
+If you wish to get the unselected items you can use `{selected: false}`.
+
+This example shows a simple use case for this selector option - a button is presented (using the [Buttons extension](https://datatables.net/extensions/buttons)) which when activated will display a count of the selected rows. 
+
+]]></info>
+
+<demo-html>
+	<div id="events" class="box">Row selected count - new information added at the top</div>
+</demo-html>
+
+</dt-example>
+

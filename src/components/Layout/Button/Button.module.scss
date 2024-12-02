@@ -1,0 +1,29 @@
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lexend', sans-serif;
+    padding: 13px 15px;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    border: 1px solid transparent;
+    background-color: #fff;
+    &:hover {
+        background-color: #fafafa;
+    }
+    span {
+        text-align: center;
+    }
+}
+
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
+.title {
+    flex-grow: 1;
+}
+.outline {
+    border-color: #ccc;
+}

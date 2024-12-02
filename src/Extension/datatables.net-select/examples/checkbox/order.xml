@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html-index" order="3">
+
+<css lib="datatables select"/>
+<js lib="jquery datatables select">
+<![CDATA[
+$('#example').DataTable({
+	columnDefs: [
+		{
+			render: DataTable.render.select(),
+			targets: 0
+		}
+	],
+	select: {
+		style: 'os',
+		selector: 'td:first-child'
+	},
+	order: [[1, 'asc']]
+});
+
+]]>
+</js>
+
+<js-vanilla>
+<![CDATA[
+new DataTable('#example', {
+	columnDefs: [
+		{
+			render: DataTable.render.select(),
+			targets: 0
+		}
+	],
+	select: {
+		style: 'os',
+		selector: 'td:first-child'
+	},
+	order: [[1, 'asc']]
+});
+
+]]>
+</js-vanilla>
+
+<title lib="Select">With ordering</title>
+
+<info><![CDATA[
+
+This example demonstrates the checkbox selection of Select being able to order a table's data. Select a row and then click the header for the checkbox column to move the selected row(s) to the top of the table.
+
+This is done through the `DataTable.render.select()` data type. The ordering will update when ordering is triggered - i.e. the row won't move immediately when selected, as this can be confusing, particularly if you can't see where the row has moved to.
+
+Please note that this option will not work if using server-side processing (`-init serverSide`).
+
+]]></info>
+
+</dt-example>
+

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="ssp" table-class="display nowrap" order="13">
+
+<css lib="datatables select buttons" />
+<js lib="jquery datatables select buttons">
+<![CDATA[
+$('#example').DataTable({
+	ajax: '../../../../examples/server_side/scripts/ids-objects.php',
+	columns: [
+		{ data: 'first_name' },
+		{ data: 'last_name' },
+		{ data: 'position' },
+		{ data: 'office' },
+		{ data: 'start_date' },
+		{ data: 'salary' }
+	],
+	layout: {
+		topStart: {
+			buttons: [
+				'pageLength',
+				{
+					text: 'View selection info',
+					action: function (e, dt) {
+						alert(
+							'Information about selected rows: '+
+							JSON.stringify(dt.select.cumulative().rows)
+						);
+					}
+				}
+			]
+		}
+	},
+	processing: true,
+	select: true,
+	serverSide: true
+});
+]]>
+</js>
+
+<js-vanilla>
+<![CDATA[
+new DataTable('#example', {
+	ajax: '../../../../examples/server_side/scripts/ids-objects.php',
+	columns: [
+		{ data: 'first_name' },
+		{ data: 'last_name' },
+		{ data: 'position' },
+		{ data: 'office' },
+		{ data: 'start_date' },
+		{ data: 'salary' }
+	],
+	layout: {
+		topStart: {
+			buttons: [
+				'pageLength',
+				{
+					text: 'View selected ids',
+					action: function (e, dt) {
+						alert(
+							'Information about selected rows: '+
+							JSON.stringify(dt.select.cumulative().rows)
+						);
+					}
+				},
+				'selectAll',
+				'selectNone'
+			]
+		}
+	},
+	processing: true,
+	select: true,
+	serverSide: true
+});
+]]>
+</js-vanilla>
+
+<title lib="Select">Server-side processing</title>
+
+<info><![CDATA[
+
+Select 2.1 introduced support for server-side processing - there is special consideration here as the row selection is client-side, but not all rows are available at the client-side (only those drawn for the current display). This has an impact on the API as `.rows({selected: true})` will only be able to fetch information about the rows that are currently display.
+
+To address this, Select introduces the `-api select.cumulative()` method which can be used to get the ids of all rows that are selected, regardless of paging or filtering. Note that the data source _must_ have a unique id per row and you may have to se the `-init rowId` option to tell DataTables what it is called (it looks for `DT_RowId` by default).
+
+Additionally, the `-button selectAll` button and checkbox header (when used with checkbox selection) will only select the currently displayed rows. This is because the client-side can't know what other rows there are that can be selected.
+
+This example let's you experiment with Select when server-side processing is enabled.
+
+]]></info>
+
+</dt-example>

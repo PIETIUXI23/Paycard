@@ -1,0 +1,210 @@
+/* General Body Styles */
+body {
+    color: #73879c;
+    background-color: #2a3f54;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the page content */
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* General form styles */
+form {
+    height: calc(50vh - 30px - 122px);
+    padding: 20px;
+}
+
+/* Panel and Card Styles */
+.x_panel {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Make sure it adapts to content layout */
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    max-height: 500px; /* Set max height for the panel */
+    overflow-y: auto; /* Allow scrolling if content exceeds max-height */
+}
+
+.x_title {
+    background-color: #f5f5f5;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    border-radius: 8px 8px 0 0;
+}
+
+.x_content {
+    padding: 20px;
+    flex: 1; /* Allow content to expand and fill available space */
+}
+
+/* Flexbox layout for equal height columns */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; /* Distribute space evenly between items */
+}
+
+.col-md-6 {
+    flex: 1 1 48%; /* Ensure equal width for each panel */
+    display: flex;
+    flex-direction: column;
+    max-width: 48%; /* Limit the max width for each column */
+    box-sizing: border-box;
+}
+
+/* Chart Styling */
+canvas {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto !important;
+    max-height: 80vh; /* Set max height relative to the viewport height */
+    width: auto; /* Prevent the canvas from stretching horizontally */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead th {
+    background-color: #f5f5f5;
+    text-align: left;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+table tbody td {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+    .x_panel {
+        padding: 10px;
+        max-height: none; /* Allow for flexible height on small screens */
+    }
+
+    .x_title {
+        font-size: 16px;
+    }
+
+    .x_content {
+        padding: 10px;
+    }
+
+    canvas {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 300px; /* Ensure chart is not too large */
+    }
+
+    #formRoomStatus .row {
+        width: 100%;
+        height: auto;
+    }
+
+    table thead th {
+        font-size: 14px;
+    }
+
+    table tbody td {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .x_panel {
+        padding: 15px;
+        height: auto; /* Ensure the panel adjusts to height for medium screens */
+    }
+
+    .x_title {
+        font-size: 18px;
+    }
+
+    .x_content {
+        padding: 15px;
+    }
+
+    canvas {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    #formRoomStatus .row {
+        width: 100% !important;
+        height: 300px !important;
+    }
+
+    table thead th {
+        font-size: 15px;
+    }
+
+    table tbody td {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .x_panel {
+        padding: 20px;
+        height: auto; /* Make sure the panel uses all available height on large screens */
+    }
+
+    .x_title {
+        font-size: 20px;
+    }
+
+    .x_content {
+        padding: 20px;
+    }
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    max-width: 93%;  /* Adjust the width to 70% of the original size */
+    height: auto !important;
+    max-height: 56vh;  /* Adjust max-height to maintain the aspect ratio (70% of 80vh) */
+    width: 85%;  /* Prevent the canvas from stretching horizontally */
+}
+
+
+    #formRoomStatus .row {
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    table thead th {
+        font-size: 16px;
+    }
+
+    table tbody td {
+        font-size: 14px;
+    }
+}

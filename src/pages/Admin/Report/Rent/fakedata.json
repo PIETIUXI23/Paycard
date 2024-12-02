@@ -1,0 +1,40 @@
+[
+    {
+        "CustomerName": "Nguyễn Văn A",
+        "IDCARDNO": "123456789",
+        "Address": "123 Đường A, Phường B, Quận C",
+        "Telephone1": "0912345678",
+        "AreaName": "Khu vực 1",
+        "RoomName": "Phòng 101",
+        "FromDate": "2024-01-01",
+        "ToDate": "2024-12-31",
+        "ExpireDate": "2024-12-31",
+        "StatusName": "Đang thuê",
+        "RoomAmount": 5000000,
+        "DepositAmount": 2000000,
+        "TotalAmount": 7000000,
+        "PayAmount": 7000000,
+        "RemainAmount": 0,
+        "PersonIntroduce": "Trần Thị C",
+        "Birthday": "1990-05-10"
+    },
+    {
+        "CustomerName": "Lê Thị B",
+        "IDCARDNO": "987654321",
+        "Address": "456 Đường D, Phường E, Quận F",
+        "Telephone1": "0987654321",
+        "AreaName": "Khu vực 2",
+        "RoomName": "Phòng 102",
+        "FromDate": "2024-03-01",
+        "ToDate": "2024-11-30",
+        "ExpireDate": "2024-11-30",
+        "StatusName": "Đã trả phòng",
+        "RoomAmount": 4500000,
+        "DepositAmount": 1500000,
+        "TotalAmount": 6000000,
+        "PayAmount": 6000000,
+        "RemainAmount": 0,
+        "PersonIntroduce": "Phạm Văn D",
+        "Birthday": "1988-03-15"
+    }
+]

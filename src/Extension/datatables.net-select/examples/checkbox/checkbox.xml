@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html-index" order="1">
+
+<css lib="datatables select"/>
+<js lib="jquery datatables select">
+<![CDATA[
+$('#example').DataTable({
+	columnDefs: [
+		{
+			orderable: false,
+			render: DataTable.render.select(),
+			targets: 0
+		}
+	],
+	select: {
+		style: 'os',
+		selector: 'td:first-child'
+	},
+	order: [[1, 'asc']]
+});
+
+]]>
+</js>
+
+<js-vanilla>
+<![CDATA[
+new DataTable('#example', {
+	columnDefs: [
+		{
+			orderable: false,
+			render: DataTable.render.select(),
+			targets: 0
+		}
+	],
+	select: {
+		style: 'os',
+		selector: 'td:first-child'
+	},
+	order: [[1, 'asc']]
+});
+
+]]>
+</js-vanilla>
+
+<title lib="Select">No ordering</title>
+
+<info><![CDATA[
+
+A selected row is typically shown in a DataTable by using a highlight background colour - however, it can also be useful to use other styling options to convey the selected state of items in a table to the end user.
+
+A common option is to use a checkbox which can be clicked on to toggle row selection, which can be particularly useful if you wish to restrict row selection activation to a particular column, so other actions can be performed on the other cells in the table (such as [inline editing](//editor.datatables.net/examples/inline-editing/simple)).
+
+A column can be shown with a checkbox that reflects the row's selected status simply through the `DataTable.render.select()` rendering function, which should be assign to the `-init columns.render` property for the column where you want the checkbox to appear.
+
+This creates a `-tag input` checkbox element, and so it is fully accessible with a keyboard.
+
+It is possible to provide `value` and `name` properties for the checkbox by passing in the locations of the values that should be used from the data source object as arguments to the function (e.g. `DataTable.render.select('value', 'name')`).
+
+]]></info>
+
+</dt-example>
+

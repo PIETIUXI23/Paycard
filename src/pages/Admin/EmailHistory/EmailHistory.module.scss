@@ -1,0 +1,131 @@
+// Styling for EmailSmsHistory Component
+
+.container {
+    padding: 1rem;
+    margin-top: 50px;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #3b82f6;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #2563eb;
+            }
+        }
+    }
+
+    .filters {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        label {
+            display: flex;
+            align-items: center;
+
+            select,
+            input {
+                margin-left: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid #ddd;
+                border-radius: 0.25rem;
+            }
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        thead {
+            background-color: #f3f4f6;
+
+            th {
+                border: 1px solid #ddd;
+                padding: 0.5rem;
+                text-align: center;
+
+                &:not(:last-child) {
+                    text-align: left;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                &:hover {
+                    background-color: #f9fafb;
+                }
+
+                td {
+                    border: 1px solid #ddd;
+                    padding: 0.5rem;
+                    text-align: center;
+
+                    &:not(:last-child) {
+                        text-align: left;
+                    }
+
+                    button {
+                        background-color: #3b82f6;
+                        color: white;
+                        padding: 0.25rem 0.5rem;
+                        border: none;
+                        border-radius: 0.25rem;
+
+                        &:hover {
+                            background-color: #2563eb;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 0.5rem;
+
+            li button {
+                padding: 0.5rem 0.75rem;
+                border: 1px solid #ddd;
+                border-radius: 0.25rem;
+                cursor: pointer;
+
+                &:not(:disabled):hover {
+                    background-color: #f3f4f6;
+                }
+
+                &.active {
+                    background-color: #3b82f6;
+                    color: white;
+                }
+            }
+
+            button:disabled {
+                cursor: not-allowed;
+            }
+        }
+    }
+}

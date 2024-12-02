@@ -1,0 +1,27 @@
+.container {
+    padding: 20px;
+}
+
+.packageTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.packageTable th, .packageTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.packageTable th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.packageTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.packageTable tr:hover {
+    background-color: #ddd;
+}

@@ -1,0 +1,44 @@
+.container {
+    padding: 20px;
+}
+
+.searchInput {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 16px;
+    width: 400px; // Điều chỉnh chiều rộng của input
+}
+
+.filterButton {
+    margin-left: 10px;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.supportTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.supportTable th, .supportTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.supportTable th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.supportTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.supportTable tr:hover {
+    background-color: #ddd;
+}
+
+.userInfo {
+    margin-top: 20px;
+}

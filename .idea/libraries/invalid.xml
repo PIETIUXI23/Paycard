@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="invalid">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/invalid/bad_offset.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/invalid/bad_decompressed_size.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/invalid/crc32.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/Extension/jszip/test/ref/invalid/compression.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

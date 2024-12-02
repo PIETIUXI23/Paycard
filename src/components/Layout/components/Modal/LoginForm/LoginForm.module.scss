@@ -1,0 +1,105 @@
+.login-form {
+    height: 700px;
+    margin-top: 20px;
+    width: 480px;
+    background-color: #fff;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 25px;
+    border-radius: 8px;
+    form {
+        height: auto;
+        > :nth-child(1) {
+            display: flex;
+            justify-content: right;
+            button {
+                cursor: pointer;
+                font-size: 25px;
+                background-color: transparent;
+                color: #999;
+            }
+        }
+        > :nth-child(2) {
+            font-size: 17px;
+            font-weight: 500;
+        }
+        > :nth-child(3) {
+            font-size: 25px;
+            font-weight: 500;
+        }
+        .input-group {
+            margin-top: 24px;
+            position: relative;
+            .icon {
+                position: absolute;
+                left: 15px;
+                top: 23px;
+                font-size: 15px;
+            }
+            .show-password {
+                position: absolute;
+                right: 15px;
+                top: 23px;
+                font-size: 15px;
+                .btn-show {
+                    display: none;
+                }
+                .action {
+                    display: inline-block;
+                }
+            }
+            input {
+                margin-top: 10px;
+                height: 50px;
+                font-size: 15px;
+                font-weight: 500;
+                width: 100%;
+                background-color: rgb(255, 255, 255);
+                border: 1px solid rgb(204, 204, 204);
+                border-radius: 8px;
+                padding: 13px 45px 13px 43px;
+                caret-color: rgb(0, 0, 0);
+                color: rgb(44, 44, 44);
+            }
+
+            button {
+                height: 50px;
+                border-radius: 8px;
+                font-size: 15px;
+                cursor: pointer;
+                width: 100%;
+                background-color: rgb(224, 60, 49);
+                padding: 14px 16px;
+                color: rgb(255, 255, 255);
+                &:hover {
+                    background-color: rgb(255, 131, 122);
+                }
+            }
+        }
+        .error-log {
+            margin-top: 10px;
+            font-size: 12px;
+            color: red;
+        }
+    }
+    .forgot-password {
+        display: flex;
+        justify-content: right;
+        font-size: 14px;
+        .redirect {
+            color: rgb(224, 60, 49);
+            display: inline-block;
+            cursor: pointer;
+            margin-top: 0px;
+        }
+    }
+    .redirect {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 30px;
+        span {
+            cursor: pointer;
+            color: rgb(224, 60, 49);
+        }
+    }
+}

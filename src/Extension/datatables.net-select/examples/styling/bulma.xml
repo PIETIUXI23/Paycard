@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" order="7" framework="bulma">
+
+<css lib="datatables select"/>
+<js lib="jquery datatables select">
+<![CDATA[
+
+$('#example').DataTable({
+	select: true
+});
+
+]]>
+</js>
+
+<js-vanilla>
+<![CDATA[
+
+new DataTable('#example', {
+	select: true
+});
+
+]]>
+</js-vanilla>
+
+<title lib="Select">Bulma</title>
+
+<info><![CDATA[
+
+This example shows DataTables and the Select extension being used with [Bulma](https://bulma.io/) providing the styling. The DataTables / Bulma integration provides seamless integration for DataTables to be used in a Bulma page.
+
+]]></info>
+
+</dt-example>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" order="21">
+
+<css lib="datatables select buttons"/>
+<js lib="jquery datatables select buttons"/>
+
+<title>Buttons - selection control</title>
+<js>
+<![CDATA[
+$('#example').DataTable({
+	layout: {
+		topStart: {
+			buttons: [
+				'selected',
+				'selectedSingle',
+				'selectAll',
+				'selectNone',
+				'selectRows',
+				'selectColumns',
+				'selectCells'
+			]
+		}
+	},
+	select: true
+});
+
+]]>
+</js>
+
+<js-vanilla>
+<![CDATA[
+new DataTable('#example', {
+	layout: {
+		topStart: {
+			buttons: [
+				'selected',
+				'selectedSingle',
+				'selectAll',
+				'selectNone',
+				'selectRows',
+				'selectColumns',
+				'selectCells'
+			]
+		}
+	},
+	select: true
+});
+
+]]>
+</js-vanilla>
+
+<info><![CDATA[
+
+Select provides a number of buttons that can be used with the [Buttons extension](https://datatables.net/extensions/buttons) for DataTables. Buttons is a framework providing common options, styling and API methods for buttons that can control a DataTable.
+
+The selection control buttons made available by Select are:
+
+* `se-button selected` - Enabled only when one or more items are selected
+* `se-button selectedSingle` - Enabled only when a single item is selected
+* `se-button selectAll` - Select all rows
+* `se-button selectNone` - Deselect all rows
+* `se-button selectRows` - Select rows
+* `se-button selectColumns` - Select columns
+* `se-button selectCells` - Select cells
+
+All of these button types are demonstrated in this example.
+
+]]></info>
+
+</dt-example>

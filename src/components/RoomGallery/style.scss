@@ -1,0 +1,28 @@
+.image-gallery {
+}
+
+.image-gallery-slide {
+    height: 390px;
+    .image-gallery-image {
+        height: 390px;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+.image-gallery-left-nav,
+.image-gallery-right-nav {
+    .image-gallery-svg {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.image-gallery-thumbnail {
+    width: 174px;
+    height: 80px;
+    .image-gallery-thumbnail-image {
+        width: 174px;
+        height: 80px;
+        object-fit: cover;
+    }
+}

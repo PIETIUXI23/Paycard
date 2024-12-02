@@ -1,0 +1,80 @@
+.wrapper {
+    height: 1000px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    height: 1500px;
+}
+
+.title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.label {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.quill {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    .ql-container {
+        border: none;
+    }
+}
+
+.address-selection {
+    display: flex;
+}
+.submit-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.map-container {
+    width: 100%;
+    height: 350px;
+    .mapboxgl-canvas-container {
+        width: 100%;
+        .mapboxgl-canvas {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}

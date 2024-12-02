@@ -1,0 +1,107 @@
+.xPanel {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+
+    .xTitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .panelToolbox {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+
+            li {
+                margin-left: 15px;
+
+                .btn {
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 5px 10px;
+
+                    &.btn-success {
+                        background-color: #28a745;
+                        color: white;
+                    }
+
+                    &.btn-danger {
+                        background-color: #dc3545;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .dataTable {
+        width: 100%;
+        border-collapse: collapse; /* Loại bỏ khoảng cách giữa các ô */
+
+        thead {
+            th {
+                text-align: center;
+                padding: 10px;
+                border-bottom: 1px solid #ddd; /* Đường kẻ dưới tiêu đề */
+                border-right: 1px solid #ddd; /* Đường kẻ dọc giữa các cột */
+            }
+
+            th:last-child {
+                border-right: none; /* Xóa đường kẻ cuối cùng */
+            }
+        }
+
+        tbody {
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #eee; /* Đường kẻ ngang */
+                border-right: 1px solid #ddd; /* Đường kẻ dọc giữa các cột */
+
+                &:last-child {
+                    border-right: none; /* Xóa đường kẻ cuối cùng */
+                }
+
+                .btn {
+                    &.btn-success {
+                        background-color: #28a745;
+                        color: white;
+                        border-radius: 5px;
+                    }
+
+                    &.btn-danger {
+                        background-color: #dc3545;
+                        color: white;
+                        margin-left: 10px;
+                        border-radius: 5px;
+                    }
+                }
+
+                .icheckbox_flat-green {
+                    position: relative;
+                }
+            }
+
+            tr:hover {
+                background-color: #f9f9f9; /* Hiệu ứng hover */
+            }
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f8f8; /* Màu nền xen kẽ cho các dòng */
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd; /* Đường viền chung */
+        }
+    }
+}

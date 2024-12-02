@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="ajax" order="8">
+
+<css lib="datatables select"/>
+<js lib="jquery datatables select"/>
+
+<js>
+<![CDATA[
+var table = $('#example').DataTable({
+	ajax: '../../../../examples/ajax/data/objects.txt',
+	columns: [
+		{ data: 'name' },
+		{ data: 'position' },
+		{ data: 'office' },
+		{ data: 'extn' },
+		{ data: 'start_date' },
+		{ data: 'salary' }
+	],
+	deferRender: true,
+	select: true
+});
+
+]]>
+</js>
+
+<js-vanilla>
+<![CDATA[
+new DataTable('#example', {
+	ajax: '../../../../examples/ajax/data/objects.txt',
+	columns: [
+		{ data: 'name' },
+		{ data: 'position' },
+		{ data: 'office' },
+		{ data: 'extn' },
+		{ data: 'start_date' },
+		{ data: 'salary' }
+	],
+	deferRender: true,
+	select: true
+});
+
+]]>
+</js-vanilla>
+
+<title>Defer rendering</title>
+
+<info><![CDATA[
+
+This example simply shows Select being used with DataTables' `dt-init deferRender` option (note that this is enabled by default in DataTables 2 and is only shown here for clarity). Deferred rendering can be particularly useful when Ajax loading data as it allows DataTables to perform a number of performance enhancing optimisations.
+
+]]></info>
+
+</dt-example>
